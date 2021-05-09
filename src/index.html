@@ -1,13 +1,106 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>TesteContainerDigitalB</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>First+Third - Front end challenge</title>
+    <base href="././">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
+    <!--<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous" />-->
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <app-root></app-root>
+    <div class="center-screen">
+        <div class="main-content">
+            <h1>Newsletter</h1>
+            <p>Select all the newsletters you’d like to receive</p>
+        </div>
+        <div class="newsletter-Option">
+            <div class="newsletter-Content">
+                <div class="newsletter-Content-Left">
+                    <img src="assets/blank.png">
+                </div>
+                <div class="newsletter-Content-Middle">
+                    <h2>Reverse The Online Gambling Ban</h2>
+                    <p>The MPA comes with three different sizes of foam and silicone tips and a carrying pouch.</p>
+                </div>
+                <div class="newsletter-Content-Right">
+                    <img src="assets/circle-not-active.png" id="first" onclick="selectFirst()">
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-Option">
+            <div class="newsletter-Content">
+                <div class="newsletter-Content-Left">
+                    <img src="assets/blank.png">
+                </div>
+                <div class="newsletter-Content-Middle">
+                    <h2>Successful Myspace Profile</h2>
+                    <p>All users on MySpace will know that there are millions of people out there.</p>
+                </div>
+                <div class="newsletter-Content-Right">
+                    <img src="assets/circle-not-active.png" id="second" onclick="selectSecond()">
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-Option">
+            <div class="newsletter-Content">
+                <div class="newsletter-Content-Left">
+                    <img src="assets/blank.png">
+                </div>
+                <div class="newsletter-Content-Middle">
+                    <h2>Home Audio Recording For Everyone</h2>
+                    <p>The number of friends and acquaintances will grow in a large number. This is what you should be looking for.</p>
+                </div>
+                <div class="newsletter-Content-Right">
+                    <img src="assets/circle-not-active.png" id="third" onclick="selectThird()">
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-Option">
+            <div class="newsletter-Content">
+                <div class="newsletter-Content-Left">
+                    <img src="assets/blank.png">
+                </div>
+                <div class="newsletter-Content-Middle">
+                    <h2>Buying Used Electronic Test</h2>
+                    <p>People after all will make friends after reading about you. If you have an ugly profile, there is no way th</p>
+                </div>
+                <div class="newsletter-Content-Right">
+                    <img src="assets/circle-not-active.png" id="fourth" onclick="selectFourth()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-content">
+        <input type="text">
+        <button>SUBSCRIBE</button>
+        <p>Select all the newsletters you’d like to receive</p>
+    </div>
 </body>
+
+<script type=text/javascript>
+    var firstSelected = document.getElementById('first');
+    console.log("firstSelected");
+    window.onload = function() {
+        firstSelected.src = "assets/circle-active.png";
+    };
+
+    function selectFirst() {
+        if (firstSelected.getAttribute('src') == "assets/circle-active.png") {
+            firstSelected.src = "assets/circle-not-active.png";
+            console.log(`1`);
+        } else {
+            firstSelected.src = "assets/circle-active.png";
+            console.log(`2`);
+        }
+    }
+</script>
+
 </html>
